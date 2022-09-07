@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <!-- nav tablet ke atas -->
+      <ul id="nav-tablet">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Galery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="https://github.com/saifullah212" target="_blank">Project</a></li>
+      </ul>
+
+      <!-- nav mobile ke bawah -->
+      <button id="nav-mobile">Menu</button>
+    </nav>
+
+    <div class="content">
+      <!-- profile -->
+      <div class="profile">
+        <!-- left -->
+        <div class="left">
+          <img src="images/user.jpg" />
+          <div class="name-group">
+            <div class="name-work">
+              <!-- nama -->
+              <p class="name" id="nama"></p>
+              <!-- role -->
+              <p class="work" id="role"></p>
+            </div>
+            <div class="btn-container">
+              <button class="btn-left">Edit</button>
+              <button class="btn-right">Resume</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- right -->
+        <div class="right">
+          <div class="right-title">
+            <p>Availability</p>
+            <p>Usia</p>
+            <p>Lokasi</p>
+            <p>Pengalaman</p>
+            <p>Email</p>
+          </div>
+          <div>
+            <!-- availability -->
+            <p id="availability"></p>
+            <!-- usia -->
+            <p id="usia"></p>
+            <!-- lokasi -->
+            <p id="lokasi"></p>
+            <!-- pengalaman -->
+            <p id="pengalaman"></p>
+            <!-- email -->
+            <p id="email"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- form -->
+      <form onsubmit="submitForm()">
+        <div>
+          <label for="masukkan nama anda">Nama</label>
+          <input type="text" name="nama" id="input-nama" />
+        </div>
+
+        <div>
+          <label for="Role"> Role</label>
+          <input type="text" id="input-role" />
+        </div>
+
+        <div>
+          <label for="Availability"> Availability</label>
+          <input type="text" id="input-availability" />
+        </div>
+
+        <div>
+          <label for="Usia"> Usia</label>
+          <input type="text" id="input-usia"/>
+        </div>
+
+        <div>
+          <label for="Lokasi"> Lokasi</label>
+          <input type="text" id="input-lokasi"/>
+        </div>
+
+        <div>
+          <label for="Pengalaman"> Pengalaman</label>
+          <input type="text" id="input-pengalaman" />
+        </div>
+
+        <div>
+          <label for="Email"> Email</label>
+          <input type="text" id="input-email"/>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <script>
+      function submitForm() {
+        event.preventDefault();
+
+        const inputNama = document.getElementById("input-nama").value;
+        document.getElementById("nama").innerText = inputNama;
+
+        const inputRole = document.getElementById("input-role").value;
+        document.getElementById("role").innerText = inputRole;
+
+        const inputAvalability = document.getElementById("input-availability").value;
+        document.getElementById("availability").innerText = inputAvalability;
+
+        const inputUsia = document.getElementById("input-usia").value;
+        document.getElementById("usia").innerText = inputUsia;
+        
+        const inputLokasi= document.getElementById("input-lokasi").value;
+        document.getElementById("lokasi").innerText = inputLokasi;
+
+        const inputPengalaman = document.getElementById("input-pengalaman").value;
+        document.getElementById("pengalaman").innerText = inputPengalaman;
+
+        const inputEmail = document.getElementById("input-email").value;
+        document.getElementById("email").innerText = inputEmail;
+      }
+    </script>
+    </div>
+  </body>
+</html>
